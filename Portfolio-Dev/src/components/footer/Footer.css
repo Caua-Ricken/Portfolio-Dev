@@ -1,0 +1,120 @@
+.footer {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #062b22;
+  color: #f0f5f0;
+  border-top: 1px solid #8fa89a;
+}
+
+.footer__content {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 24px;
+}
+
+.footer__identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__mark {
+  background: #edf1e9;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #d1ded4;
+  border-radius: 50%;
+  color: #062b22;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.footer__identity strong {
+  display: block;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+.footer__identity p {
+  margin: 5px 0 0;
+  color: #d1ded4;
+  font-size: 0.88rem;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(209, 222, 212, 0.25);
+}
+
+.footer__bottom small {
+  color: #d1ded4;
+  font-size: 0.82rem;
+}
+
+.footer__bottom a {
+  color: #f0f5f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer__bottom a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.footer a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 5px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer__label { margin: 0 0 16px; font-size: 1rem; font-weight: 600; }
+.footer__socials { display: flex; flex-wrap: wrap; gap: 12px; }
+.footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #648775;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.footer__socials img[src$="/github.svg"] { filter: brightness(0) invert(1); }
+.footer__socials a:hover { background: #174936; border-color: #d1ded4; }
+.footer__email { display: inline-block; margin-top: 18px; color: #d1ded4; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.footer__contacts { min-width: 0; }
+
+@media (max-width: 600px) {
+  .footer__content {
+    width: calc(100% - 32px);
+    padding-top: 36px;
+  }
+
+  .footer__identity {
+    padding-bottom: 0;
+  }
+
+  .footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

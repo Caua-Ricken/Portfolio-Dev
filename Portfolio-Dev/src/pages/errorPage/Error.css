@@ -1,0 +1,85 @@
+.error-page {
+  --error-silver: #dce4df;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  color: var(--error-silver);
+  background: radial-gradient(ellipse at 27% 44%, #14503d 0%, #07392c 35%, #03271f 73%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: left;
+  color-scheme: dark;
+}
+
+#root:has(.error-page) {
+  width: 100%;
+  max-width: none;
+  border: 0;
+}
+
+.error-page *, .error-page *::before, .error-page *::after { box-sizing: border-box; }
+
+.error-header, .error-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-inline: clamp(24px, 6vw, 100px);
+}
+
+.error-header { min-height: 120px; border-bottom: 1px solid #dce4df25; }
+.error-brand { display: flex; align-items: center; gap: 16px; color: inherit; text-decoration: none; font-size: 15px; font-weight: 600; letter-spacing: 4px; }
+.error-brand-symbol { font-family: Georgia, serif; font-size: 35px; font-weight: 400; letter-spacing: -4px; padding-right: 4px; }
+.error-brand-caption { display: block; margin-top: 5px; font-size: 7px; font-weight: 400; letter-spacing: 2px; }
+.error-header-note, .error-footer { font-size: 9px; letter-spacing: 2px; color: #acbfb5; }
+
+.error-main {
+  width: min(1160px, 100%);
+  margin: auto;
+  padding: 72px 40px 88px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 100px);
+}
+
+.error-dial {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 24px;
+  background: repeating-conic-gradient(from -1deg, #c1d1c775 0deg 1deg, transparent 1deg 6deg);
+  border: 1px solid #c2d5c642;
+  box-shadow: 0 0 0 9px #c2d5c608, 0 0 0 10px #c2d5c61c, 0 25px 70px #001b1750;
+}
+
+.error-dial::before { content: ''; position: absolute; inset: -26px; border: 1px solid #c2d5c615; border-radius: 50%; }
+.error-dial-inner { height: 100%; border-radius: 50%; border: 1px solid #b5c6bd55; background: radial-gradient(circle at 40% 30%, #154e3e, #063329 80%); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.error-dial-label, .error-dial-bottom { font-size: 8px; letter-spacing: 3px; color: #b2c7bb; }
+.error-dial-bottom { font-size: 6px; letter-spacing: 2px; }
+.error-number { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(90px, 12vw, 164px); line-height: 1.3; letter-spacing: -8px; padding-right: 8px; color: #dde5df; background: linear-gradient(135deg, #f9fcfa 10%, #a1b5a8 45%, #ecf2ee 60%, #829b8d 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.error-eyebrow { font-size: 9px; letter-spacing: 3px; color: #adbfaf; margin: 0 0 24px; }
+.error-copy h1 { font-family: Georgia, 'Times New Roman', serif; color: #edf1eb; font-size: clamp(36px, 3.5vw, 50px); font-weight: 400; line-height: 1.15; letter-spacing: -1.6px; margin: 0 0 24px; }
+.error-description { max-width: 350px; font-size: 14px; line-height: 1.9; color: #b2c3b9; }
+.error-home { display: inline-flex; align-items: center; justify-content: space-between; gap: 38px; min-height: 52px; padding: 14px 24px; margin-top: 34px; border: 1px solid #b9cec077; border-radius: 2px; color: #eff4ef; text-decoration: none; font-size: 9px; font-weight: 600; letter-spacing: 2px; transition: background 180ms, border-color 180ms; }
+.error-home span { font-size: 19px; font-weight: 400; }
+.error-home:hover { background: #ffffff10; border-color: #dce4df; }
+.error-page a:focus-visible { outline: 2px solid #edf1eb; outline-offset: 6px; }
+.error-footer { min-height: 78px; border-top: 1px solid #dce4df25; font-size: 8px; }
+.error-footer-status { display: inline-flex; align-items: center; gap: 9px; }
+.error-footer-status > span { width: 4px; height: 4px; border-radius: 50%; background: #bacfc0; }
+
+@media (min-width: 1600px) { .error-main { max-width: 1300px; } }
+@media (max-width: 760px) {
+  .error-header { min-height: 96px; }
+  .error-header-note { display: none; }
+  .error-main { grid-template-columns: 1fr; gap: 52px; padding: 54px 28px; text-align: center; }
+  .error-dial { width: min(290px, 82%); margin-inline: auto; padding: 17px; }
+  .error-number { font-size: 100px; }
+  .error-description { margin-inline: auto; }
+  .error-copy h1 { font-size: 38px; }
+  .error-footer { justify-content: center; flex-wrap: wrap; gap: 12px 24px; padding-block: 22px; font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce) { .error-home { transition: none; } }
