@@ -1,0 +1,121 @@
+.certificados {
+  background: #edf1e9;
+}
+
+.certificados__content {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 96px;
+  border-top: 1px solid #c6d7ca;
+}
+
+.certificados__eyebrow {
+  color: #275b45;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.certificados__heading h2 {
+  margin: 20px 0 36px;
+  color: #092f25;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.certificados__heading h2 span {
+  color: #648775;
+}
+
+.certificados__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #c6d7ca;
+}
+
+.certificados__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 16px;
+  border-bottom: 1px solid #c6d7ca;
+}
+
+.certificados__item:hover,
+.certificados__item:focus-within {
+  background: #e1e9e1;
+}
+
+.certificados__course,
+.certificados__institution {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.certificados__course h3 {
+  margin: 0;
+  color: #174936;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.certificados__details {
+  margin: 8px 0 0;
+  color: #53675a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.certificados__institution {
+  margin: 0;
+  color: #40574a;
+  line-height: 1.6;
+}
+
+.certificados__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #275b45;
+  border-radius: 3px;
+  color: #174936;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.certificados__link:hover {
+  color: #ffffff;
+  background: #174936;
+}
+
+.certificados__link:focus-visible {
+  outline: 3px solid #648775;
+  outline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .certificados__content {
+    padding: 40px 0 64px;
+  }
+
+  .certificados__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 24px 12px;
+  }
+
+  .certificados__link {
+    justify-self: start;
+    margin-top: 4px;
+  }
+}

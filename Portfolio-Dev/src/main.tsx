@@ -14,6 +14,7 @@ import Error from './pages/errorPage/Error'
 //pages
 import Inicio from './pages/inicio/Inicio'
 import Sobre from './pages/sobre/Sobre'
+import Certificados from './components/certificados/Certificados'
 import Projetos from './pages/projetos/Projetos'
 import Contato from './pages/contato/Contato'
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
           <main>
             <Inicio />
             <Sobre />
+            <Certificados />
             <Projetos />
             <Contato />
           </main>

@@ -44,6 +44,15 @@ export type Education = {
   period: string
 }
 
+export type Certificate = {
+  id: string
+  name: string
+  institution: string
+  year?: number
+  workload?: string
+  url: string
+}
+
 export type PortfolioData = {
   site: {
     title: string
@@ -65,6 +74,7 @@ export type PortfolioData = {
   skills: Skill[]
   projects: Project[]
   education: Education[]
+  certificates: Certificate[]
 }
 
 export const portfolioData: PortfolioData = {
@@ -144,6 +154,33 @@ export const portfolioData: PortfolioData = {
       course: 'Sistemas de Informação',
       institution: 'Centro Universitario Barriga Verde- Unibave',
       period: '2024 - 2027',
+    },
+  ],
+
+  certificates: [
+    {
+      id: 'certificado-1',
+      name: 'Node do Zero a Maestria',
+      institution: 'Udemy',
+      year: 2026,
+      workload: '38 horas',
+      url: `${import.meta.env.BASE_URL}Certificado-Node.pdf`,
+    },
+    {
+      id: 'certificado-2',
+      name: 'Curso de React JS',
+      institution: 'Hora de codar',
+      year: 2026,
+      workload: '36 horas',
+      url:  `${import.meta.env.BASE_URL}Certificado-React.pdf`,
+    },
+    {
+      id: 'certificado-3',
+      name: 'Curso de SQL com Firebird',
+      institution: 'Udemy',
+      year: 2026,
+      workload: '7 horas',
+      url:  `${import.meta.env.BASE_URL}Certificado-Firebird.pdf`,
     },
   ],
 };
