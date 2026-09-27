@@ -10,6 +10,7 @@ import reactIcon from '../assets/icons/react.svg'
 import nodejsIcon from '../assets/icons/nodejs.svg'
 import expressIcon from '../assets/icons/express.svg'
 import mysqlIcon from '../assets/icons/mysql.svg'
+import mongodbIcon from '../assets/icons/mongodb.svg'
 import firebirdIcon from '../assets/icons/firebird.svg'
 import gitIcon from '../assets/icons/git.svg'
 import githubIcon from '../assets/icons/github.svg'
@@ -110,6 +111,7 @@ export const portfolioData: PortfolioData = {
     { name: 'Node.js', icon: nodejsIcon },
     { name: 'Express', icon: expressIcon },
     { name: 'MySQL', icon: mysqlIcon },
+    { name: 'MongoDB', icon: mongodbIcon },
     { name: 'FireBird', icon: firebirdIcon },
     { name: 'Git', icon: gitIcon },
     { name: 'GitHub', icon: githubIcon },
