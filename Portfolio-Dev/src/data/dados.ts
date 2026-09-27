@@ -52,6 +52,7 @@ export type Certificate = {
   year?: number
   workload?: string
   url: string
+  skills: string[]
 }
 
 export type PortfolioData = {
@@ -167,6 +168,7 @@ export const portfolioData: PortfolioData = {
       year: 2026,
       workload: '38 horas',
       url: `${import.meta.env.BASE_URL}Certificado-Node.pdf`,
+      skills: ['Node.JS', 'Express', 'MySQL', 'MongoDB', 'MVC']
     },
     {
       id: 'certificado-2',
@@ -175,6 +177,7 @@ export const portfolioData: PortfolioData = {
       year: 2026,
       workload: '36 horas',
       url:  `${import.meta.env.BASE_URL}Certificado-React.pdf`,
+      skills: ['React', 'React-Router', 'Hooks', 'Context-API']
     },
     {
       id: 'certificado-3',
@@ -183,6 +186,7 @@ export const portfolioData: PortfolioData = {
       year: 2026,
       workload: '7 horas',
       url:  `${import.meta.env.BASE_URL}Certificado-Firebird.pdf`,
+      skills: ['Firebird', 'IbExpert']
     },
   ],
 };

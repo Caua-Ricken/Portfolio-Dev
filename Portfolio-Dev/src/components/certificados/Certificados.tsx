@@ -25,6 +25,13 @@ const Certificados = () => {
                 <div className="certificados__course">
                   <h3>{certificate.name}</h3>
                   {details && <p className="certificados__details">{details}</p>}
+                  {certificate.skills.length > 0 && (
+                    <ul className="certificados__skills" aria-label="Habilidades aprendidas">
+                      {certificate.skills.map((skill) => (
+                        <li key={skill} className="certificados__skill">{skill}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
                 <p className="certificados__institution">{certificate.institution}</p>
                 <a

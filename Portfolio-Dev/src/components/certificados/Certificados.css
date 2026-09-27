@@ -74,8 +74,32 @@
 
 .certificados__institution {
   margin: 0;
-  color: #40574a;
+  color: #174936;
+  font-size: 1.05rem;
+  font-weight: 600;
   line-height: 1.6;
+}
+
+.certificados__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certificados__skill {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #9aafa0;
+  border-radius: 6px;
+  background: #e1e9e1;
+  color: #174936;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .certificados__link {
