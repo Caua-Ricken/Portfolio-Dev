@@ -21,7 +21,7 @@ const Footer = () => {
             <nav className="footer__socials" aria-label="Redes sociais">
               {portfolioData.socialLinks.map((link) => (
                 <a key={link.label} href={link.url} target="_blank" rel="noreferrer" aria-label={`${link.label}`}>
-                  <img src={`/icons/${link.label.toLowerCase()}.svg`} alt="" width={20} height={20} />
+                  <img src={link.icon} alt="" width={20} height={20} />
                   {link.label} <span aria-hidden="true">↗</span>
                 </a>
               ))}

@@ -41,7 +41,7 @@ const Header = () => {
               aria-label={link.label}
             >
               <img
-                src={`/icons/${link.label.toLowerCase()}.svg`}
+                src={link.icon}
                 alt=""
                 width={22}
                 height={22}

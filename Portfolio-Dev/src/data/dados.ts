@@ -1,6 +1,24 @@
+import avatar from '../assets/img-caua.jpeg'
+import bikeStore from '../assets/Bike Store.png'
+import wineHub from '../assets/wine hub.png'
+import tempo from '../assets/tempo.png'
+import htmlIcon from '../assets/icons/html.svg'
+import cssIcon from '../assets/icons/css.svg'
+import javascriptIcon from '../assets/icons/javascript.svg'
+import typescriptIcon from '../assets/icons/typescript.svg'
+import reactIcon from '../assets/icons/react.svg'
+import nodejsIcon from '../assets/icons/nodejs.svg'
+import expressIcon from '../assets/icons/express.svg'
+import mysqlIcon from '../assets/icons/mysql.svg'
+import firebirdIcon from '../assets/icons/firebird.svg'
+import gitIcon from '../assets/icons/git.svg'
+import githubIcon from '../assets/icons/github.svg'
+import linkedinIcon from '../assets/icons/linkedin.svg'
+
 export type SocialLink = {
   label: string
   url: string
+  icon: string
 }
 
 export type Skill = {
@@ -64,27 +82,27 @@ export const portfolioData: PortfolioData = {
     location: 'Braço do Norte, SC, Brasil',
     email: 'cauaricken@gmail.com',
     whatsapp: '5548996709510', 
-    avatar: '/img-caua.jpeg',
-    resumeUrl: '/Curriculo.pdf',
+    avatar: avatar,
+    resumeUrl: `${import.meta.env.BASE_URL}Curriculo.pdf`,
   },
 
   socialLinks: [
-    { label: 'GitHub', url: 'https://github.com/Caua-Ricken' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/cauaricken' },
+    { label: 'GitHub', icon: githubIcon, url: 'https://github.com/Caua-Ricken' },
+    { label: 'LinkedIn', icon: linkedinIcon, url: 'https://www.linkedin.com/in/cauaricken' },
   ],
 
   skills: [
-    { name: 'HTML', icon: '/icons/html.svg' },
-    { name: 'CSS', icon: '/icons/css.svg' },
-    { name: 'JavaScript', icon: '/icons/javascript.svg' },
-    { name: 'TypeScript', icon: '/icons/typescript.svg' },
-    { name: 'React', icon: '/icons/react.svg' },
-    { name: 'Node.js', icon: '/icons/nodejs.svg' },
-    { name: 'Express', icon: '/icons/express.svg' },
-    { name: 'MySQL', icon: '/icons/mysql.svg' },
-    { name: 'FireBird', icon: '/icons/firebird.svg' },
-    { name: 'Git', icon: '/icons/git.svg' },
-    { name: 'GitHub', icon: '/icons/github.svg' },
+    { name: 'HTML', icon: htmlIcon },
+    { name: 'CSS', icon: cssIcon },
+    { name: 'JavaScript', icon: javascriptIcon },
+    { name: 'TypeScript', icon: typescriptIcon },
+    { name: 'React', icon: reactIcon },
+    { name: 'Node.js', icon: nodejsIcon },
+    { name: 'Express', icon: expressIcon },
+    { name: 'MySQL', icon: mysqlIcon },
+    { name: 'FireBird', icon: firebirdIcon },
+    { name: 'Git', icon: gitIcon },
+    { name: 'GitHub', icon: githubIcon },
   ],
 
   projects: [
@@ -94,7 +112,7 @@ export const portfolioData: PortfolioData = {
       description: 'Pagina de E-commerce focada em vendas de bicicletas premium. Utilizado React e Node.js, junto com JWT para segurança',
       tags: ['React', 'API Rest', 'Node.js', 'Express', 'MVC', 'MySQL', 'JWT'],
       repoUrl: 'https://github.com/Caua-Ricken/motorcycle/tree/main/Motorcycle',
-      image: '/Bike Store.png',
+      image: bikeStore,
       featured: true,
     },
     {
@@ -104,7 +122,7 @@ export const portfolioData: PortfolioData = {
       tags: ['CSS', 'JavaScript'],
       liveUrl: 'https://caua-ricken.github.io/WineHub/',
       repoUrl: 'https://github.com/Caua-Ricken/WineHub',
-      image: '/wine hub.png',
+      image: wineHub,
       featured: true,
     },
     {
@@ -114,7 +132,7 @@ export const portfolioData: PortfolioData = {
       tags: ['React', 'API', 'JavaScript'],
       liveUrl: 'https://caua-ricken.github.io/weather/',
       repoUrl: 'https://github.com/Caua-Ricken/weather',
-      image: '/tempo.png',
+      image: tempo,
       featured: true,
     },
     
