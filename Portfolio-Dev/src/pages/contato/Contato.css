@@ -1,6 +1,6 @@
 .contato {
-  border-top: 1px solid #d1ded4;
-  background: radial-gradient(circle at 15% 80%, rgba(129, 166, 137, 0.14), transparent 40%), #edf1e9;
+  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at 15% 80%, rgba(71, 211, 171, 0.05), transparent 40%), var(--surface);
 }
 
 .contato__content {
@@ -15,7 +15,7 @@
 }
 
 .contato__eyebrow {
-  color: #275b45;
+  color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -23,20 +23,20 @@
 
 .contato h2 {
   margin: 20px 0 0;
-  color: #092f25;
-  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  font-family: var(--font-sans);
   font-size: clamp(2.6rem, 5vw, 4rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.045em;
 }
 
-.contato h2 span { color: #648775; }
+.contato h2 span { color: var(--accent); }
 
 .contato__heading p {
   max-width: 520px;
   margin: 20px auto 0;
-  color: #40574a;
+  color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -46,9 +46,9 @@
   max-width: 640px;
   margin: 0 auto;
   padding: clamp(20px, 4vw, 32px);
-  border: 1px solid #c6d7ca;
+  border: 1px solid var(--border);
   border-radius: 14px;
-  background: #f5f6f1;
+  background: var(--bg);
 }
 
 .contato__field {
@@ -59,7 +59,7 @@
 }
 
 .contato__field label {
-  color: #174936;
+  color: var(--text);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -70,17 +70,17 @@
   width: 100%;
   min-width: 0;
   padding: 14px 16px;
-  border: 1px solid #9aafa0;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #edf1e9;
-  color: #092f25;
+  background: var(--surface);
+  color: var(--text);
   font: inherit;
   line-height: 1.6;
 }
 
 .contato__field textarea { resize: vertical; min-height: 160px; }
 .contato__field input::placeholder,
-.contato__field textarea::placeholder { color: #53675a; }
+.contato__field textarea::placeholder { color: var(--muted); }
 
 .contato__actions { display: flex; flex-direction: column; gap: 12px; }
 
@@ -91,7 +91,7 @@
   gap: 10px;
   min-height: 48px;
   padding: 12px 20px;
-  border: 1px solid #0a3a2b;
+  border: 1px solid var(--accent);
   border-radius: 6px;
   font: inherit;
   font-size: 0.95rem;
@@ -100,20 +100,20 @@
   transition: background 0.2s ease;
 }
 
-.contato__button--primary { background: #0a3a2b; color: #fff; }
-.contato__button--primary:hover:not(:disabled) { background: #175740; }
-.contato__button--outline { background: transparent; color: #0a3a2b; }
-.contato__button--outline:hover { background: #e1e9e1; }
+.contato__button--primary { background: var(--accent); color: #fff; }
+.contato__button--primary:hover:not(:disabled) { background: var(--accent-hover); }
+.contato__button--outline { background: transparent; color: var(--accent); }
+.contato__button--outline:hover { background: var(--raised); }
 .contato__button:disabled { opacity: 0.55; cursor: not-allowed; }
 
 .contato input:focus-visible,
 .contato textarea:focus-visible,
 .contato button:focus-visible,
-.contato a:focus-visible { outline: 3px solid #648775; outline-offset: 4px; }
+.contato a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 
 .contato__note {
   margin: 16px 0 0;
-  color: #53675a;
+  color: var(--muted);
   font-size: 0.85rem;
   line-height: 1.6;
   text-align: center;
@@ -121,14 +121,14 @@
 
 .contato__email {
   margin: 24px 0 0;
-  color: #40574a;
+  color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.7;
   text-align: center;
   overflow-wrap: anywhere;
 }
 
-.contato__email a { color: #275b45; text-underline-offset: 4px; }
+.contato__email a { color: var(--accent); text-underline-offset: 4px; }
 
 @media (max-width: 600px) {
   .contato__content { padding: 64px 0; }
@@ -137,3 +137,7 @@
 @media (prefers-reduced-motion: reduce) {
   .contato__button { transition: none; }
 }
+
+.contato__form { background: var(--surface); box-shadow: 0 16px 48px #0002; }
+.contato__field input, .contato__field textarea { background: var(--bg); }
+.contato__button--primary { color: var(--bg); }

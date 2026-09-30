@@ -136,7 +136,7 @@ export const portfolioData: PortfolioData = {
       liveUrl: 'https://caua-ricken.github.io/WineHub/',
       repoUrl: 'https://github.com/Caua-Ricken/WineHub',
       image: wineHub,
-      featured: true,
+      featured: false,
     },
     {
       id: 'projeto-3',
@@ -146,7 +146,7 @@ export const portfolioData: PortfolioData = {
       liveUrl: 'https://caua-ricken.github.io/weather/',
       repoUrl: 'https://github.com/Caua-Ricken/weather',
       image: tempo,
-      featured: true,
+      featured: false,
     },
     
   ],

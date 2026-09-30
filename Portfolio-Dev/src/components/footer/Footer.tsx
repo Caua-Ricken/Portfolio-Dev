@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer__content">
         <div className="footer__top">
           <div className="footer__identity">
-          <span className="footer__mark" aria-hidden="true">CR</span>
+          <span className="footer__mark" aria-hidden="true">&lt;/&gt;</span>
 
           <div>
             <strong>{name}</strong>

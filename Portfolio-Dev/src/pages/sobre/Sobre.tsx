@@ -1,9 +1,10 @@
+
 import { portfolioData } from '../../data/dados'
 import './Sobre.css'
 
 const Sobre = () => {
   const { bio, role, location } = portfolioData.profile
-  const { skills, education } = portfolioData
+  const { education } = portfolioData
 
   return (
     <section id="sobre" className="sobre" aria-labelledby="sobre-title">
@@ -12,7 +13,9 @@ const Sobre = () => {
           <span className="sobre__eyebrow">UM POUCO SOBRE MIM</span>
           <h2 id="sobre-title">Sobre mim<span>.</span></h2>
           <p className="sobre__bio">{bio}</p>
-
+        </div>
+        <div className="sobre__profile">
+          <span className="sobre__file" aria-hidden="true">&gt;_ perfil.dev</span>
           <dl className="sobre__details">
             <div>
               <dt>Atuação</dt>
@@ -39,23 +42,6 @@ const Sobre = () => {
             </div>
           )}
         </div>
-
-        {skills.length > 0 && (
-          <div className="sobre__skills">
-            <h3>Tecnologias e ferramentas</h3>
-            <p>Recursos que fazem parte do meu desenvolvimento.</p>
-            <ul className="sobre__skill-list">
-              {skills.map((skill) => (
-                <li key={`${skill.name}`} className="sobre__skill">
-                  {skill.icon && (
-                    <img src={skill.icon} alt="" aria-hidden="true" width={24} height={24} />
-                  )}
-                  <span>{skill.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </section>
   )

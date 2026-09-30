@@ -1,16 +1,16 @@
 .certificados {
-  background: #edf1e9;
+  background: var(--surface);
 }
 
 .certificados__content {
   width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
   padding: 48px 0 96px;
-  border-top: 1px solid #c6d7ca;
+  border-top: 1px solid var(--border);
 }
 
 .certificados__eyebrow {
-  color: #275b45;
+  color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -18,8 +18,8 @@
 
 .certificados__heading h2 {
   margin: 20px 0 36px;
-  color: #092f25;
-  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  font-family: var(--font-sans);
   font-size: clamp(2.6rem, 5vw, 4rem);
   font-weight: 500;
   line-height: 1.1;
@@ -27,14 +27,14 @@
 }
 
 .certificados__heading h2 span {
-  color: #648775;
+  color: var(--accent);
 }
 
 .certificados__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #c6d7ca;
+  border-top: 1px solid var(--border);
 }
 
 .certificados__item {
@@ -43,12 +43,12 @@
   align-items: center;
   gap: 32px;
   padding: 28px 16px;
-  border-bottom: 1px solid #c6d7ca;
+  border-bottom: 1px solid var(--border);
 }
 
 .certificados__item:hover,
 .certificados__item:focus-within {
-  background: #e1e9e1;
+  background: var(--raised);
 }
 
 .certificados__course,
@@ -59,7 +59,7 @@
 
 .certificados__course h3 {
   margin: 0;
-  color: #174936;
+  color: var(--text);
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5;
@@ -67,14 +67,14 @@
 
 .certificados__details {
   margin: 8px 0 0;
-  color: #53675a;
+  color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .certificados__institution {
   margin: 0;
-  color: #174936;
+  color: var(--text);
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.6;
@@ -93,10 +93,10 @@
   max-width: 100%;
   box-sizing: border-box;
   padding: 5px 10px;
-  border: 1px solid #9aafa0;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #e1e9e1;
-  color: #174936;
+  background: var(--raised);
+  color: var(--text);
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.5;
@@ -109,21 +109,21 @@
   gap: 16px;
   min-height: 44px;
   padding: 0 18px;
-  border: 1px solid #275b45;
+  border: 1px solid var(--accent);
   border-radius: 3px;
-  color: #174936;
+  color: var(--text);
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
 }
 
 .certificados__link:hover {
-  color: #ffffff;
-  background: #174936;
+  color: var(--text);
+  background: var(--text);
 }
 
 .certificados__link:focus-visible {
-  outline: 3px solid #648775;
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -143,3 +143,7 @@
     margin-top: 4px;
   }
 }
+
+.certificados__skill { color: #8ccbe5; font-family: var(--font-mono); font-weight: 400; }
+.certificados__link { border-color: var(--border); border-radius: 6px; }
+.certificados__link:hover { background: var(--accent); color: var(--bg); }

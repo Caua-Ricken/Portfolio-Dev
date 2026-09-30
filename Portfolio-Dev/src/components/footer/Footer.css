@@ -1,8 +1,8 @@
 .footer {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #062b22;
-  color: #f0f5f0;
-  border-top: 1px solid #8fa89a;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
 }
 
 .footer__content {
@@ -18,15 +18,15 @@
 }
 
 .footer__mark {
-  background: #edf1e9;
+  background: var(--surface);
   display: grid;
   place-items: center;
   width: 42px;
   height: 42px;
   flex-shrink: 0;
-  border: 1px solid #d1ded4;
+  border: 1px solid var(--border);
   border-radius: 50%;
-  color: #062b22;
+  color: var(--bg);
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -39,7 +39,7 @@
 
 .footer__identity p {
   margin: 5px 0 0;
-  color: #d1ded4;
+  color: var(--border);
   font-size: 0.88rem;
 }
 
@@ -53,12 +53,12 @@
 }
 
 .footer__bottom small {
-  color: #d1ded4;
+  color: var(--border);
   font-size: 0.82rem;
 }
 
 .footer__bottom a {
-  color: #f0f5f0;
+  color: var(--text);
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -70,7 +70,7 @@
 }
 
 .footer a:focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--text);
   outline-offset: 5px;
 }
 
@@ -91,15 +91,15 @@
   gap: 10px;
   min-height: 44px;
   padding: 0 14px;
-  border: 1px solid #648775;
+  border: 1px solid var(--accent);
   border-radius: 6px;
   color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
 }
-.footer__socials img[src$="/github.svg"] { filter: brightness(0) invert(1); }
-.footer__socials a:hover { background: #174936; border-color: #d1ded4; }
-.footer__email { display: inline-block; margin-top: 18px; color: #d1ded4; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.footer__socials a[aria-label="GitHub"] img { filter: brightness(0) invert(1); }
+.footer__socials a:hover { background: var(--text); border-color: var(--border); }
+.footer__email { display: inline-block; margin-top: 18px; color: var(--border); text-underline-offset: 4px; overflow-wrap: anywhere; }
 .footer__contacts { min-width: 0; }
 
 @media (max-width: 600px) {
@@ -118,3 +118,8 @@
     gap: 12px;
   }
 }
+
+.footer__mark { border-radius: 8px; background: var(--raised); color: var(--accent); font-family: var(--font-mono); }
+.footer__identity p, .footer__bottom small, .footer__email { color: var(--muted); }
+.footer__socials a { border-color: var(--border); }
+.footer__socials a:hover { background: var(--raised); border-color: var(--accent); }
