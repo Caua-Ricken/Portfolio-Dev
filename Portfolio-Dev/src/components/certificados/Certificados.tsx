@@ -1,8 +1,12 @@
 import { portfolioData } from '../../data/dados'
+import { useState } from 'react'
 import './Certificados.css'
 
 const Certificados = () => {
   const { certificates } = portfolioData
+  const [showAll, setShowAll] = useState(false)
+
+  const certificatesToShow = showAll ? certificates : certificates.slice(0, 3)
 
   if (certificates.length === 0) return null
 
@@ -14,8 +18,8 @@ const Certificados = () => {
           <h2 id="certificados-title">Certificados<span>.</span></h2>
         </header>
 
-        <ul className="certificados__list">
-          {certificates.map((certificate) => {
+        <ul id="certificados-list" className="certificados__list">
+          {certificatesToShow.map((certificate) => {
             const details = [certificate.year, certificate.workload]
               .filter((value) => value !== undefined && value !== '')
               .join(' · ')
@@ -47,6 +51,20 @@ const Certificados = () => {
             )
           })}
         </ul>
+        {certificates.length > 3 && (
+          <div className="certificados__actions">
+            <button
+              type="button"
+              className="certificados__toggle"
+              onClick={() => setShowAll((prev) => !prev)}
+              aria-expanded={showAll}
+              aria-controls="certificados-list"
+            >
+              {showAll ? 'Ver menos' : 'Ver mais'}
+              <span aria-hidden="true">{showAll ? '↑' : '↓'}</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

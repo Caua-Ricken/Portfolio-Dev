@@ -15,6 +15,9 @@ import firebirdIcon from '../assets/icons/firebird.svg'
 import gitIcon from '../assets/icons/git.svg'
 import githubIcon from '../assets/icons/github.svg'
 import linkedinIcon from '../assets/icons/linkedin.svg'
+import vscodeIcon from '../assets/icons/vscode.svg'
+import cursorIcon from '../assets/icons/cursor.svg'
+import dockerIcon from '../assets/icons/docker.svg'
 
 export type SocialLink = {
   label: string
@@ -25,6 +28,7 @@ export type SocialLink = {
 export type Skill = {
   name: string
   icon?: string
+  category: 'FRONT-END' | 'BACK-END' | 'LINGUAGENS' | 'BANCO DE DADOS' | 'DEVOPS / INFRA' | 'FERRAMENTAS'
 }
 
 export type Project = {
@@ -88,9 +92,9 @@ export const portfolioData: PortfolioData = {
 
   profile: {
     name: 'Cauã Ricken',
-    role: 'Desenvolvedor Full Stack',
+    role: 'TypeScript Full Stack Developer',
     headline: 'Código com propósito. Cada detalhe importa.',
-    bio: 'Sou estudante de Sistemas de Informação, apaixonado por desenvolvimento de software e tecnologia. Acredito que programar vai muito além de escrever código, é encontrar soluções criativas para problemas reais e impactar a vida das pessoas com sistemas inteligentes e funcionais.',
+    bio: 'Sou estudante de Sistemas de Informação, apaixonado por desenvolvimento de software e tecnologia.\n\nAcredito que programar vai muito além de escrever código, é encontrar soluções criativas para problemas reais e impactar a vida das pessoas com sistemas inteligentes e funcionais.\n\nNo back-end, trabalho com Node.js, Express, MySQL, MongoDB e Git. No front-end, atuo com React e TypeScript.',
     location: 'Braço do Norte, SC, Brasil',
     email: 'cauaricken@gmail.com',
     whatsapp: '5548996709510', 
@@ -104,18 +108,21 @@ export const portfolioData: PortfolioData = {
   ],
 
   skills: [
-    { name: 'HTML', icon: htmlIcon },
-    { name: 'CSS', icon: cssIcon },
-    { name: 'JavaScript', icon: javascriptIcon },
-    { name: 'TypeScript', icon: typescriptIcon },
-    { name: 'React', icon: reactIcon },
-    { name: 'Node.js', icon: nodejsIcon },
-    { name: 'Express', icon: expressIcon },
-    { name: 'MySQL', icon: mysqlIcon },
-    { name: 'MongoDB', icon: mongodbIcon },
-    { name: 'FireBird', icon: firebirdIcon },
-    { name: 'Git', icon: gitIcon },
-    { name: 'GitHub', icon: githubIcon },
+    { name: 'TypeScript', icon: typescriptIcon, category: 'LINGUAGENS'},
+    { name: 'JavaScript', icon: javascriptIcon, category: 'LINGUAGENS'},
+    { name: 'HTML', icon: htmlIcon, category: 'LINGUAGENS'},
+    { name: 'CSS', icon: cssIcon, category: 'LINGUAGENS'},
+    { name: 'React', icon: reactIcon, category: 'FRONT-END'},
+    { name: 'Node.js', icon: nodejsIcon, category: 'BACK-END'},
+    { name: 'Express', icon: expressIcon, category: 'BACK-END'},
+    { name: 'MySQL', icon: mysqlIcon, category: 'BANCO DE DADOS'},
+    { name: 'MongoDB', icon: mongodbIcon, category: 'BANCO DE DADOS'},
+    { name: 'FireBird', icon: firebirdIcon, category: 'BANCO DE DADOS'},
+    { name: 'Docker', icon: dockerIcon, category: 'DEVOPS / INFRA'},
+    { name: 'Git', icon: gitIcon, category: 'DEVOPS / INFRA'},
+    { name: 'GitHub', icon: githubIcon, category: 'DEVOPS / INFRA'},
+    { name: 'VS Code', icon: vscodeIcon, category: 'FERRAMENTAS'},
+    { name: 'Cursor', icon: cursorIcon, category: 'FERRAMENTAS'},
   ],
 
   projects: [
@@ -187,6 +194,15 @@ export const portfolioData: PortfolioData = {
       workload: '7 horas',
       url:  `${import.meta.env.BASE_URL}Certificado-Firebird.pdf`,
       skills: ['Firebird', 'IbExpert']
+    },
+    {
+      id: 'certificado-4',
+      name: 'Curso de JavaScript',
+      institution: 'Hora de Codar',
+      year: 2026,
+      workload: '20 horas',
+      url:  `${import.meta.env.BASE_URL}Certificado - javascript.pdf`,
+      skills: ['JavaScript', 'DOM', 'Fetch', 'API']
     },
   ],
 };

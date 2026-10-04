@@ -214,3 +214,21 @@
 .header__socials { border-color: var(--border); }
 .header__socials a:hover { background: var(--raised); }
 @media (max-width: 380px) { .header__nav a { font-size: .75rem; } }
+
+.header { height: var(--header-height); }
+.header__nav a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
+}
+.header__nav a:hover::after,
+.header__nav a:focus-visible::after,
+.header__nav a[aria-current='location']::after { transform: scaleX(1); }
+.header__nav a[aria-current='location']:not(.header__contact) { color: var(--text); }
