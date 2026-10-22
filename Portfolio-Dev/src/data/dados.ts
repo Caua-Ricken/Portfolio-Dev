@@ -1,6 +1,6 @@
 import avatar from '../assets/img-caua.jpeg'
 import bikeStore from '../assets/Bike Store.png'
-import wineHub from '../assets/wine hub.png'
+import rotalivre from '../assets/rota livre.png'
 import tempo from '../assets/tempo.png'
 import htmlIcon from '../assets/icons/html.svg'
 import cssIcon from '../assets/icons/css.svg'
@@ -137,12 +137,12 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 'projeto-2',
-      title: 'Wine Hub',
-      description: 'Página para apresentação e venda de vinhos, desenvolvida com HTML, CSS e JavaScript. O usuário pode explorar os produtos disponíveis e realizar compras diretamente pelo site.',
-      tags: ['CSS', 'JavaScript'],
-      liveUrl: 'https://caua-ricken.github.io/WineHub/',
-      repoUrl: 'https://github.com/Caua-Ricken/WineHub',
-      image: wineHub,
+      title: 'Rota Livre',
+      description: 'Planejador de viagens que permite explorar destinos, consultar o clima, estimar gastos e salvar seus planos de viagem.',
+      tags: ['TypeScript', 'React', 'API Rest'],
+      liveUrl: 'https://caua-ricken.github.io/Rota-Livre/',
+      repoUrl: 'https://github.com/Caua-Ricken/Rota-Livre',
+      image: rotalivre,
       featured: false,
     },
     {
