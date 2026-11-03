@@ -1,5 +1,5 @@
 import avatar from '../assets/img-caua.jpeg'
-import bikeStore from '../assets/Bike Store.png'
+import leagueSupply from '../assets/League.png'
 import rotalivre from '../assets/rota livre.png'
 import tempo from '../assets/tempo.png'
 import htmlIcon from '../assets/icons/html.svg'
@@ -128,11 +128,12 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       id: 'projeto-1',
-      title: 'Bikes Store - Ecommerce de Bicicletas',
-      description: 'Pagina de E-commerce focada em vendas de bicicletas premium. Utilizado React e Node.js, junto com JWT para segurança',
-      tags: ['React', 'API Rest', 'Node.js', 'Express', 'MVC', 'MySQL', 'JWT'],
-      repoUrl: 'https://github.com/Caua-Ricken/motorcycle/tree/main/Motorcycle',
-      image: bikeStore,
+      title: 'League Supply - Artigos Esportivos',
+      description: 'Pagina de E-commerce focada em vendas de artigos esportivos. Utilizado React e Node.js, junto com JWT e Cloudflare para segurança',
+      tags: ['React', 'API Rest', 'Node.js', 'Express', 'MVC', 'MongoDB', 'Mongoose', 'JWT'],
+      liveUrl: 'https://league-supply-nu.vercel.app/',
+      repoUrl: 'https://github.com/Caua-Ricken/League-Supply',
+      image: leagueSupply,
       featured: true,
     },
     {
