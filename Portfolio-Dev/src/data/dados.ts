@@ -1,7 +1,7 @@
 import avatar from '../assets/img-caua.jpeg'
 import leagueSupply from '../assets/League.png'
 import rotalivre from '../assets/rota livre.png'
-import tempo from '../assets/tempo.png'
+import api from '../assets/api.png'
 import htmlIcon from '../assets/icons/html.svg'
 import cssIcon from '../assets/icons/css.svg'
 import javascriptIcon from '../assets/icons/javascript.svg'
@@ -130,7 +130,7 @@ export const portfolioData: PortfolioData = {
       id: 'projeto-1',
       title: 'League Supply - Artigos Esportivos',
       description: 'Pagina de E-commerce focada em vendas de artigos esportivos. Utilizado React e Node.js, junto com JWT e Cloudflare para segurança',
-      tags: ['React', 'API Rest', 'Node.js', 'Express', 'MVC', 'MongoDB', 'Mongoose', 'JWT'],
+      tags: ['React', 'API Rest', 'Node.js', 'Express', 'MVC', 'MongoDB', 'Mongoose', 'JWT' , 'Cloudflare'],
       liveUrl: 'https://league-supply-nu.vercel.app/',
       repoUrl: 'https://github.com/Caua-Ricken/League-Supply',
       image: leagueSupply,
@@ -148,12 +148,11 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: 'projeto-3',
-      title: 'App de Previsão do Tempo',
-      description: 'Aplicação web de previsão do tempo desenvolvida com React e JavaScript. O usuário pode buscar qualquer cidade e visualizar informações meteorológicas em tempo real.',
-      tags: ['React', 'API', 'JavaScript'],
-      liveUrl: 'https://caua-ricken.github.io/weather/',
-      repoUrl: 'https://github.com/Caua-Ricken/weather',
-      image: tempo,
+      title: 'API-Gestão de Usuários',
+      description: 'API REST para gerenciamento de usuários, com cadastro, consultas paginadas, atualização e exclusão. Desenvolvida com Node.js, TypeScript, Express e MySQL, utiliza Prisma, validações com Zod, testes automatizados, logs estruturados e Docker Compose.',
+      tags: ['Node.js', 'TypeScript', 'Express', 'Prisma', 'MySQL', 'Docker', 'Vitest', 'Zod'],
+      repoUrl: 'https://github.com/Caua-Ricken/API-gestao-usuarios',
+      image: api,
       featured: false,
     },
     
