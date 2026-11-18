@@ -1,5 +1,4 @@
 .projetos {
-  background: radial-gradient(circle at 90% 90%, rgba(71, 211, 171, 0.04), transparent 40%), var(--bg);
   border-top: 1px solid var(--border);
 }
 
@@ -49,13 +48,13 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 0 6px 20px rgba(9, 47, 37, 0.08);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--text) 5%, transparent);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .projetos__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(9, 47, 37, 0.1);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--text) 10%, transparent);
 }
 
 .projetos__card--featured {
@@ -175,13 +174,13 @@
 }
 
 .projetos__links .projetos__link--primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--text);
+  background: var(--button-bg);
+  border-color: var(--button-bg);
+  color: var(--button-text);
 }
 
 .projetos__links .projetos__link--primary:hover {
-  background: var(--accent-hover);
+  background: var(--button-hover);
 }
 
 .projetos__links a:focus-visible {
@@ -214,12 +213,10 @@
 }
 
 .projetos__heading { text-align: left; }
-.projetos__card { border-radius: 10px; box-shadow: 0 8px 24px #0002; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.projetos__card { border-radius: 10px; transition: transform .2s, border-color .2s, box-shadow .2s; }
 .projetos__card--featured { border-color: var(--border); }
-.projetos__card:hover { border-color: #68e0bc80; box-shadow: 0 16px 36px #0004; }
+.projetos__card:hover { border-color: var(--accent); }
 .projetos__card h3 { font-size: 1.3rem; font-weight: 650; }
 .projetos__badge { color: var(--accent); font-family: var(--font-mono); }
-.projetos__tags li { font-family: var(--font-mono); color: #8ccbe5; background: #8ccbe508; }
-.projetos__links .projetos__link--primary { color: var(--bg); }
+.projetos__tags li { font-family: var(--font-mono); color: var(--tag-text); background: var(--tag-bg); }
 .projetos__links a:hover { border-color: var(--accent); background: var(--raised); }
-.projetos__links .projetos__link--primary:hover { background: var(--accent-hover); }

@@ -1,6 +1,5 @@
 .contato {
   border-top: 1px solid var(--border);
-  background: radial-gradient(circle at 15% 80%, rgba(71, 211, 171, 0.05), transparent 40%), var(--surface);
 }
 
 .contato__content {
@@ -100,8 +99,8 @@
   transition: background 0.2s ease;
 }
 
-.contato__button--primary { background: var(--accent); color: #fff; }
-.contato__button--primary:hover:not(:disabled) { background: var(--accent-hover); }
+.contato__button--primary { background: var(--button-bg); color: var(--button-text); }
+.contato__button--primary:hover:not(:disabled) { background: var(--button-hover); }
 .contato__button--outline { background: transparent; color: var(--accent); }
 .contato__button--outline:hover { background: var(--raised); }
 .contato__button:disabled { opacity: 0.55; cursor: not-allowed; }
@@ -138,6 +137,5 @@
   .contato__button { transition: none; }
 }
 
-.contato__form { background: var(--surface); box-shadow: 0 16px 48px #0002; }
+.contato__form { background: var(--surface); box-shadow: 0 8px 28px color-mix(in srgb, var(--text) 8%, transparent); }
 .contato__field input, .contato__field textarea { background: var(--bg); }
-.contato__button--primary { color: var(--bg); }

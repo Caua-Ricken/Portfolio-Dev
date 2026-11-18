@@ -11,14 +11,19 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState('#inicio')
   const headerRef = useRef<HTMLElement>(null)
   useEffect(() => {
+    const header = headerRef.current
+    if (!header) return
+
     let frame = 0
     const update = () => {
       frame = 0
       const sections = document.querySelectorAll<HTMLElement>('main section[id]')
-      const offset = (headerRef.current?.offsetHeight ?? 80) + 24
+      const headerBottom = header.getBoundingClientRect().bottom
       let current = '#inicio'
       sections.forEach(section => {
-        if (section.getBoundingClientRect().top <= offset) current = `#${section.id}`
+        if (Math.round(section.getBoundingClientRect().top - headerBottom) <= 0) {
+          current = `#${section.id}`
+        }
       })
       if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
         current = sections.length ? `#${sections[sections.length - 1].id}` : current
@@ -47,7 +52,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="header" ref={headerRef}>
+    <header className={activeSection === '#inicio' ? 'header' : 'header theme-light'} ref={headerRef}>
       <div className="header__content">
         <a href="#inicio" className="header__brand">
           <span className="header__brand-mark" aria-hidden="true">&lt;/&gt;</span>

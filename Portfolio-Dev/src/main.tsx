@@ -30,11 +30,13 @@ const router = createBrowserRouter([
         element: (
           <main>
             <Inicio />
-            <Sobre />
-            <Skills />
-            <Projetos />
-            <Certificados />
-            <Contato />
+            <div className="portfolio-sections theme-light">
+              <Sobre />
+              <Skills />
+              <Projetos />
+              <Certificados />
+              <Contato />
+            </div>
           </main>
         ),
       },

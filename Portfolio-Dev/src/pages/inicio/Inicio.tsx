@@ -2,28 +2,68 @@ import { useEffect, useState } from 'react'
 import { portfolioData } from '../../data/dados'
 import './Inicio.css'
 
+const { name, role, location } = portfolioData.profile
+
+const backgroundCode = `import { useState, useEffect } from 'react';
+import { Router } from 'express';
+import type { Pool } from 'mysql2/promise';
+
+interface Developer {
+  name: string;
+  role: string;
+  stack: string[];
+  location: string;
+}
+
+const caua: Developer = {
+  name: '${name}',
+  role: '${role}',
+  stack: ['TypeScript', 'React', 'Node.js',
+          'MySQL', 'Docker', 'Express'],
+  location: '${location}',
+};
+
+async function buildAmazing(): Promise<void> {
+  while (true) {
+    await learn();
+    await build();
+    await ship();
+  }
+}
+
+export default caua;
+`
+
+const codeLines = Array.from(backgroundCode.matchAll(/^[^\n]*/gm), ({ 0: text, index }) => ({
+  text,
+  keyword: text.match(/^(?:async )?(import|interface|const|function|export)\b/)?.[1],
+  start: index,
+}))
+
+const renderBackgroundCode = (visibleLength: number, showCursor = false) =>
+  codeLines.map(({ text, keyword, start }, index) => {
+    const revealed = visibleLength - start
+    const isCurrentLine = revealed >= 0 && revealed <= text.length
+
+    return (
+      <span className="inicio__code-line" key={start}>
+        <span className="inicio__code-number">{revealed >= 0 ? index + 1 : ''}</span>
+        <span data-keyword={keyword}>
+          {text.slice(0, Math.max(0, revealed))}
+          {showCursor && isCurrentLine && <span className="inicio__code-cursor" />}
+        </span>
+      </span>
+    )
+  })
+
 const Inicio = () => {
-  const { name, avatar, role, location } = portfolioData.profile
+  const { avatar } = portfolioData.profile
   const roles = [role, 'React & Node.js Developer']
   const [roleIndex, setRoleIndex] = useState(0)
   const [roleText, setRoleText] = useState('')
   const [deleting, setDeleting] = useState(false)
   const [codeLength, setCodeLength] = useState(0)
   const phrase = roles[roleIndex]
-
-  const backgroundCode = `import { Developer } from './portfolio';
-
-interface Profile {
-  name: string;
-  stack: string[];
-}
-
-const developer: Profile = {
-  name: '${name}',
-  stack: ['React', 'TypeScript', 'Node.js'],
-};
-
-export default developer;`
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -45,20 +85,19 @@ export default developer;`
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     let length = 0
     const interval = window.setInterval(() => {
-      length += 1
+      length = Math.min(length + 2, backgroundCode.length)
       setCodeLength(length)
       if (length >= backgroundCode.length) window.clearInterval(interval)
     }, 20)
     return () => window.clearInterval(interval)
-  }, [backgroundCode])
+  }, [])
 
-  
   return (
     <section id="inicio" className="inicio" aria-labelledby="inicio-title">
       <div className="inicio__hero">
         <pre className="inicio__code" aria-hidden="true">
-          <span className="inicio__animated-code">{backgroundCode.slice(0, codeLength)}</span>
-          <span className="inicio__static-code">{backgroundCode}</span>
+          <span className="inicio__animated-code">{renderBackgroundCode(codeLength, true)}</span>
+          <span className="inicio__static-code">{renderBackgroundCode(backgroundCode.length)}</span>
         </pre>
 
         {avatar && <img className="inicio__avatar" src={avatar} alt={`Foto de ${name}`} width={148} height={148} />}

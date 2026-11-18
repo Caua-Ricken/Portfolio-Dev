@@ -18,7 +18,7 @@ const Projetos = () => {
                   <img
                     className="projetos__image"
                     src={project.image}
-                    alt={`Prévia do projeto ${project.title}`}
+                    alt={`Capa ilustrativa do projeto ${project.title}`}
                     loading="lazy"
                   />
                 ) : (

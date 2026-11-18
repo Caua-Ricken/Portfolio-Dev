@@ -1,4 +1,4 @@
-.error-page { min-height: 100svh; display: flex; flex-direction: column; background: radial-gradient(ellipse at 25% 40%, #68e0bc0c, transparent 55%), var(--bg); color: var(--text); }
+.error-page { min-height: 100svh; display: flex; flex-direction: column; background: radial-gradient(ellipse at 25% 40%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 55%), var(--bg); color: var(--text); }
 .error-header, .error-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: min(1200px, calc(100% - 48px)); margin-inline: auto; }
 .error-header { min-height: 96px; border-bottom: 1px solid var(--border); }
 .error-brand { display: flex; align-items: center; gap: 16px; color: var(--text); text-decoration: none; font-weight: 650; }
@@ -6,7 +6,7 @@
 .error-brand-caption { display: block; margin-top: 6px; color: var(--muted); font: .65rem var(--font-mono); }
 .error-header-note, .error-footer { color: var(--muted); font: .7rem var(--font-mono); }
 .error-main { width: min(1160px, calc(100% - 48px)); margin: auto; padding: 80px 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(40px, 6vw, 96px); }
-.error-dial { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: 12px 12px 0 #68e0bc0a; }
+.error-dial { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); box-shadow: 12px 12px 0 color-mix(in srgb, var(--accent) 4%, transparent); }
 .error-dial-inner { min-height: 320px; padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); }
 .error-dial-label, .error-dial-bottom { color: var(--muted); font: .7rem var(--font-mono); text-align: center; line-height: 1.7; }
 .error-number { color: var(--accent); font: 700 clamp(80px, 12vw, 144px)/1.6 var(--font-mono); letter-spacing: -.08em; }

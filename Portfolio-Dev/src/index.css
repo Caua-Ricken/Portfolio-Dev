@@ -1,14 +1,18 @@
 :root {
   color-scheme: dark;
-  --bg: #0b1016;
+  --bg: oklch(12.9% 0.042 264.695);
   --header-height: 80px;
-  --surface: #111922;
-  --raised: #192530;
-  --border: #2a3946;
-  --text: #edf3f8;
-  --muted: #a5b4c3;
-  --accent: #68e0bc;
-  --accent-hover: #95eed3;
+  --surface: oklch(20.8% 0.042 265.755);
+  --raised: oklch(27.9% 0.041 260.031);
+  --border: oklch(44.6% 0.043 257.281);
+  --text: #fff;
+  --muted: oklch(70.4% 0.04 256.788);
+  --accent: oklch(67.3% 0.182 276.935);
+  --accent-hover: oklch(78.5% 0.115 274.713);
+  --primary: hsl(231 60% 50%);
+  --button-bg: oklch(51.1% 0.262 276.966);
+  --button-hover: oklch(58.5% 0.233 277.117);
+  --button-text: #fff;
   --font-sans: 'Segoe UI', Arial, sans-serif;
   --font-mono: 'Cascadia Code', Consolas, monospace;
   font-family: var(--font-sans);
@@ -19,9 +23,31 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
 body { margin: 0; min-width: 0; }
 main { padding-top: var(--header-height); }
+
+.theme-light {
+  color-scheme: light;
+  --bg: hsl(40 20% 97%);
+  --bg-alt: color-mix(in oklab, var(--raised) 40%, var(--bg));
+  --surface: #fff;
+  --raised: hsl(220 14% 93%);
+  --border: hsl(220 13% 88%);
+  --text: hsl(220 20% 12%);
+  --muted: hsl(220 10% 40%);
+  --accent: var(--primary);
+  --accent-hover: color-mix(in oklab, var(--accent) 85%, var(--text));
+  --button-bg: var(--accent);
+  --button-hover: var(--accent-hover);
+  --tag-text: var(--accent);
+  --tag-bg: hsl(231 60% 92%);
+  color: var(--text);
+}
+
+.portfolio-sections > section { background: var(--bg); }
+.portfolio-sections > section:nth-child(even) { background: var(--bg-alt); }
+
 ::selection { background: var(--accent); color: var(--bg); }
 a, button, input, textarea { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
@@ -31,7 +57,6 @@ a, button, input, textarea { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 850px) {
   :root { --header-height: 112px; }
-  html { scroll-padding-top: 128px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

@@ -1,5 +1,4 @@
 .certificados {
-  background: var(--surface);
 }
 
 .certificados__content {
@@ -144,7 +143,7 @@
   }
 }
 
-.certificados__skill { color: #8ccbe5; font-family: var(--font-mono); font-weight: 400; }
+.certificados__skill { color: var(--tag-text); background: var(--tag-bg); font-family: var(--font-mono); font-weight: 400; }
 .certificados__link { border-color: var(--border); border-radius: 6px; }
 .certificados__link:hover { background: var(--accent); color: var(--bg); }
 

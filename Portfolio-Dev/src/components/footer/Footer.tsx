@@ -5,7 +5,7 @@ const Footer = () => {
   const { name, role, email } = portfolioData.profile
 
   return (
-    <footer className="footer">
+    <footer className="footer theme-light">
       <div className="footer__content">
         <div className="footer__top">
           <div className="footer__identity">

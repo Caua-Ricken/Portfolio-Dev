@@ -1,5 +1,4 @@
 .skills {
-  background: var(--bg);
   border-top: 1px solid var(--border);
 }
 
@@ -56,7 +55,7 @@
 }
 .skills__item:hover { background: var(--raised); border-color: var(--accent); }
 .skills__item img { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; }
-.skills__icon--mono { filter: brightness(0) invert(1); }
+.skills__icon--mono { filter: brightness(0); }
 
 @media (max-width: 600px) {
   .skills__content { width: calc(100% - 40px); padding: 48px 0 56px; }
